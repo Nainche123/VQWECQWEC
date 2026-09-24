@@ -1,0 +1,60 @@
+services:
+  - type: web
+    name: nexivo-hub-web
+    runtime: node
+    region: singapore
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NEXIVO_OPERATOR_USER
+        sync: false
+      - key: NEXIVO_OPERATOR_PASSWORD
+        sync: false
+      - key: NEXIVO_BOT_WORKER_SECRET
+        sync: false
+      - key: NEXIVO_LICENSE_ISSUE_SECRET
+        sync: false
+      - key: NEXIVO_BOT_CLIENT_ID
+        sync: false
+      - key: NEXIVO_BOT_INVITE_URL
+        sync: false
+      - key: NEXIVO_BOT_DISPLAY_NAME
+        value: NEXIVO HUB Bot
+      - key: NEXIVO_DB_FILE
+        value: data/db.json
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: NEXIVO_SESSION_DAYS
+        value: "30"
+      - key: NEXIVO_OWNER_LICENSE_KEY
+        sync: false
+      - key: NEXIVO_OWNER_DISCORD_ID
+        sync: false
+      - key: NEXIVO_DISCORD_CLIENT_ID
+        sync: false
+      - key: NEXIVO_DISCORD_CLIENT_SECRET
+        sync: false
+      - key: NEXIVO_DISCORD_REDIRECT_URI
+        sync: false
+      - key: NEXIVO_DISCORD_AUTH_REDIRECT_URI
+        sync: false
+      - key: NEXIVO_GOOGLE_CLIENT_ID
+        sync: false
+      - key: NEXIVO_GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: NEXIVO_GOOGLE_AUTH_REDIRECT_URI
+        sync: false
+      - key: NEXIVO_IP_LOG_RETENTION_DAYS
+        value: "30"
+      - key: NEXIVO_STORE_BANK_INFO
+        sync: false
+      - key: NEXIVO_STORE_DISCORD_INVITE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SECRET_KEY
+        sync: false
+      - key: SUPABASE_STATE_TABLE
+        value: nexivo_state

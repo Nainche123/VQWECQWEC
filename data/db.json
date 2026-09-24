@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "owner",
+      "username": "0nTop",
+      "passwordHash": "775789a75523f775bfe4ebea165738d1:f373a4270e1347442118a6f29a2eb518b91a6baa6b8498558218edd7815604f6c5c23ca5ad72adef17d9cc0522dac259e360193143a731269c34cc2d9ac2a763",
+      "plan": "PRO_PREMIUM",
+      "role": "OWNER",
+      "licenseId": "lic_7224798aae77341250",
+      "createdAt": "2026-09-24T10:39:43.112Z"
+    }
+  ],
+  "licenses": [
+    {
+      "id": "lic_7224798aae77341250",
+      "key": "VEX-PRP-6C9770-5A6D6A-7EE0B7",
+      "plan": "PRO_PREMIUM",
+      "status": "ACTIVE",
+      "userId": "owner",
+      "createdAt": "2026-09-24T10:39:43.113Z",
+      "activatedAt": "2026-09-24T10:39:43.113Z",
+      "expiresAt": null,
+      "durationDays": 0,
+      "discordUserId": null,
+      "orderId": null,
+      "issuerUserId": "owner",
+      "issuerUsername": "0nTop",
+      "botSecret": "vh_41Szi9tngSg-POqYNZd6d_eFM0qSSVgB",
+      "bot": null,
+      "owner": true
+    }
+  ],
+  "sessions": [],
+  "products": [],
+  "productKeys": [],
+  "orders": [],
+  "reviews": [],
+  "settings": {
+    "owner": {}
+  },
+  "audit": [],
+  "securityLogs": [],
+  "verifyStates": [],
+  "oauthStates": [],
+  "events": [],
+  "bots": [],
+  "botCredentials": [],
+  "botConfig": {},
+  "topupRequests": [],
+  "walletLedger": [],
+  "meta": {
+    "nextEventId": 1
+  }
+}

@@ -1,0 +1,14 @@
+NEXIVO HUB Worker Auth Fix
+
+수정 내용:
+- Render의 NEXIVO_BOT_WORKER_SECRET를 trim()해서 앞뒤 공백/줄바꿈 때문에 401이 발생하지 않도록 수정했습니다.
+- 요청 헤더의 X-NEXIVO-Worker-Secret도 trim() 후 비교합니다.
+- 시크릿 값 자체를 로그/응답에 노출하지 않습니다.
+
+배포:
+1. 기존 Render Web Service 프로젝트 파일을 이 패키지 내용으로 교체
+2. Render에서 새 배포 실행
+3. DisHost 봇은 기존 LICENSE-FIX 패키지를 그대로 사용
+
+중요:
+- 실제 비밀값을 Discord/채팅에 보내지 마세요.

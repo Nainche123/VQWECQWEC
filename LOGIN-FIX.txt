@@ -1,0 +1,18 @@
+NEXIVO HUB login fix
+
+원인:
+- 로그인 폼 바인딩 코드에서 `activate` 변수를 잘못 참조하여 JavaScript ReferenceError가 발생했고,
+  그 아래의 로그인 submit 이벤트가 등록되지 않았습니다.
+
+수정:
+- `input.required = !activate && !isOwnerName` -> `input.required = state.mode === 'activate' && !isOwnerName`
+
+검증:
+- node --check server.js 통과
+- node --check public/app.js 통과
+- 임시 로컬 환경변수로 0nTop 오너 로그인 API 200 OK 확인
+- `/api/health` 200 OK 확인
+
+보안:
+- 실제 `.env` / 비밀번호 / Discord Bot Token은 이 ZIP에 포함하지 않습니다.
+- 로컬에서 `.env.example`를 `.env`로 복사하고 필요한 Secret을 직접 설정하세요.
